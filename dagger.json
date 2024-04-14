@@ -1,0 +1,12 @@
+{
+  "name": "dagger-demo-sample-app",
+  "sdk": "go",
+  "dependencies": [
+    {
+      "name": "go-pipeline",
+      "source": "github.com/dylanrhysscott/dagger-go-pipeline@d6bb835cec6eb15b7abc371de8419b1c6bfff4c0"
+    }
+  ],
+  "source": "dagger",
+  "engineVersion": "v0.11.0"
+}
