@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"io"
+	"log"
+	"net/http"
+)
+
+func getRoot(w http.ResponseWriter, r *http.Request) {
+	io.WriteString(w, "Hello from a dagger built app\n")
+}
 
 func main() {
-	fmt.Println("Hello from Dagger")
+	http.HandleFunc("/", getRoot)
+	log.Fatal(http.ListenAndServe(":3000", nil))
 }
